@@ -25,7 +25,6 @@ jobs:
 
 workflows:
   version: 2
-  when:
   build:
     # Run the welcome/run job in its own container
     jobs:
