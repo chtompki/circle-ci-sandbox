@@ -7,10 +7,26 @@ jobs:
       - image: ubuntu:latest
     steps:
       - checkout
-      - run: echo "Hello World"
+      - run:
+          command: |
+            echo "Hello World"
+            VAR=1
+            if test "${VAR}" == "1"
+            then
+              echo "Hi 2"
+            else
+              echo "Hi 1"
+            fi
+#  tag
+#    docker:
+#      - image: ubuntu:latest
+#    steps:
+#      - checkout
+#      - run: chmod +x ./.circleci/git-tagger.sh && ./.circleci/git-tagger.sh
 
 workflows:
   version: 2
+  when:
   build:
     # Run the welcome/run job in its own container
     jobs:
@@ -19,3 +35,6 @@ workflows:
       - build:
           requires:
             - approve
+#      - tag:
+#          requires:
+#            - build

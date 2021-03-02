@@ -1,0 +1,11 @@
+{
+  "name": "circle-ci-sandbox",
+  "version": "0.0.1",
+  "description": "An sandbox for playing around in circle ci",
+  "license": "Apache-2.0",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chtompki/circle-ci-sandbox.git"
+  }
+}
